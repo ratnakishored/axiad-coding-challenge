@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Create Workflow Step</title>
+</head>
+
+<body>
+	<header th:replace="layout::menu-header"></header>
+	<h1>Create Workflow Step</h1>
+	<div>
+		<form th:object="${workflowStep}" th:action="@{createWorkflowStep}" action="#" method="post">
+			<table>
+				<tr>
+					<td>Step Name:</td>
+					<td><input type="text" th:field="*{name}" /></td>
+				</tr>
+				<tr>
+					<td>Step Description:</td>
+					<td><input type="text" th:field="*{description}" /></td>
+				</tr>
+				
+				<tr>
+					<td>Assign to Workflow:</td>
+					<td>
+						<select th:field="*{workflowId}">
+							<option th:each="workflow: ${allWorkflows}" th:value="${workflow.workflowId}" th:text="${workflow.name}"></option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Assign to User:</td>
+					<td>
+						<select th:field="*{userId}">
+							<option th:each="user: ${allUsers}" th:value="${user.userId}" th:text="${user.name}"></option>
+						</select>
+					</td>
+				</tr>
+			
+			</table>
+			
+			
+			<input type="submit" value="Save" />
+		
+		</form>
+	
+	</div>
+</body>
+</html>

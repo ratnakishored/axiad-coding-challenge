@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Create Workflow</title>
+</head>
+
+<body>
+	<header th:replace="layout::menu-header"></header>
+	<h1>Create Workflow</h1>
+	<div>
+		<form th:object="${workflow}" th:action="@{createWorkflow}" action="#" method="post">
+			<table>
+				<tr>
+					<td>Workflow Name:</td>
+					<td><input type="text" th:field="*{name}" /></td>
+				</tr>
+				<tr>
+					<td>Workflow Description:</td>
+					<td><input type="text" th:field="*{description}" /></td>
+				</tr>
+			
+			</table>
+			
+			
+			<input type="submit" value="Save" />
+		
+		</form>
+	
+	</div>
+</body>
+</html>

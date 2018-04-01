@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+</head>
+
+<body>
+	<header th:fragment="menu-header">
+		<a th:href="@{/}">Home</a>&emsp;
+		<a th:href="@{/workflow}">Workflow</a>&emsp;
+		<a th:href="@{/workflowStep}">Workflow Step</a>
+	</header>
+</body>
+
+</html>
