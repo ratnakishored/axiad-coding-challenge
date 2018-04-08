@@ -7,6 +7,10 @@ https://github.com/ratnakishored/axiad-coding-challenge.git
 
 Right-Click on Git Repository in your Eclipse or STS IDE and Select Import Maven Projects. The projects will appear in the explorer.
 
+## Workflow Management
+1. Run WorkflowManagerTest and StepManagerTest
+
+#### Dynamic Workflow ##########################
 ## Execute 
 1. Expand the dynamicworkflow project
 2. Run the project as Spring Boot App if STS IDE used or Run DynamicworkflowApplication.java. This will initialize spring boot application.
